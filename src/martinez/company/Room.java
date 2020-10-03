@@ -2,6 +2,7 @@ package martinez.company;
 
 public class Room {
 
+    // Instance Fields || Variables
     private int number;
     private String type;
     private int floor;
@@ -10,6 +11,15 @@ public class Room {
     private Client occupant;
     private float averagePrice;
 
+    // Constructor
+    public Room(int number, String type, int floor, float averagePrice) {
+        this.number = number;
+        this.type = type;
+        this.floor = floor;
+        this.averagePrice = averagePrice;
+    }
+
+    // Getter Setters
     public int getNumber() {
         return number;
     }

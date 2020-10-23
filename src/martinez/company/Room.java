@@ -19,6 +19,16 @@ public class Room {
         this.averagePrice = averagePrice;
     }
 
+    // Reserve method
+    public boolean reserveRoom(Client occupant) {
+        // conditions
+            // if room is occupied then return false --> return return occuppied
+            // if occupant already has a room reserved
+            // if room needs cleaning
+        
+
+    }
+
     // Getter Setters
     public int getNumber() {
         return number;

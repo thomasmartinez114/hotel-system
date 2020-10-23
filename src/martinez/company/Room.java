@@ -36,6 +36,13 @@ public class Room {
             return true;
     }
 
+    // Checkout method
+    public void checkoutRoom(Client occupant) {
+        // remove client from object
+        // mark isOccupied as false
+        // set needsCleaning to true
+    }
+
     // Getter Setters
     public int getNumber() {
         return number;

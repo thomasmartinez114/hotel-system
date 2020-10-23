@@ -16,17 +16,24 @@ public class Room {
         this.number = number;
         this.type = type;
         this.floor = floor;
+        this.occupant = null;
         this.averagePrice = averagePrice;
     }
 
     // Reserve method
     public boolean reserveRoom(Client occupant) {
         // conditions
-            // if room is occupied then return false --> return return occuppied
+            // if room is occupied then return false
             // if occupant already has a room reserved
             // if room needs cleaning
-        
-
+        if (isOccupied && needsCleaning){
+            System.out.println("unavailable");
+            return false;
+        }
+            this.occupant = occupant; // set occupant to the occupant passed in method
+            this.isOccupied = true;
+            // Update client bill to avg price
+            return true;
     }
 
     // Getter Setters

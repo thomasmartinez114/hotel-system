@@ -75,4 +75,17 @@ public class Room {
     public void setAveragePrice(float averagePrice) {
         this.averagePrice = averagePrice;
     }
+
+    @Override
+    public String toString() {
+        return "Room{" +
+                "number=" + number +
+                ", type='" + type + '\'' +
+                ", floor=" + floor +
+                ", isOccupied=" + isOccupied +
+                ", needsCleaning=" + needsCleaning +
+                ", occupant=" + occupant +
+                ", averagePrice=" + averagePrice +
+                '}';
+    }
 }

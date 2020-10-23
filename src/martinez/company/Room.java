@@ -20,6 +20,12 @@ public class Room {
         this.averagePrice = averagePrice;
     }
 
+    // cleanRoom method
+    public void cleanRoom() {
+        if (!needsCleaning)
+            this.needsCleaning = true;
+    }
+
     // Reserve method
     public boolean reserveRoom(Client occupant) {
         // conditions
@@ -28,6 +34,7 @@ public class Room {
             // if room needs cleaning
         if (isOccupied && needsCleaning){
             System.out.println("unavailable");
+            cleanRoom(); // set to clean the room
             return false;
         }
             this.occupant = occupant; // set occupant to the occupant passed in method
@@ -39,8 +46,13 @@ public class Room {
     // Checkout method
     public void checkoutRoom(Client occupant) {
         // remove client from object
+        this.occupant = null;
+
         // mark isOccupied as false
+        this.isOccupied = false;
+
         // set needsCleaning to true
+        this.needsCleaning = true;
     }
 
     // Getter Setters

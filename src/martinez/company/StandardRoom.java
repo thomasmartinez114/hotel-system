@@ -1,18 +1,28 @@
 package martinez.company;
 
-public class StandardRoom {
+public class StandardRoom extends Room {
 
     // Instance Fields || Variables
-    private String type;
     private int rooms;
     private int beds;
 
-    public String getType() {
-        return type;
+    // Call super to allow to extend with the Constructors
+    public StandardRoom(int number, String type, int floor, float averagePrice, int rooms, int bed) {
+        super(number, type, floor, averagePrice); // Inheriting from parent class must always be first
+
+        // Assigning variables
+        this.rooms = rooms;
+        this.beds = beds;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    @Override //Override reserveRoom from parent class
+    public boolean reserveRoom(Client occupant) {
+
+        if(occupant.getPartySize() > this.beds * 2) {
+            System.out.println("Rooms is unavailable");
+            return false;
+        }
+        return super.reserveRoom(occupant);
     }
 
     public int getRooms() {
@@ -30,4 +40,12 @@ public class StandardRoom {
     public void setBeds(int beds) {
         this.beds = beds;
     }
+
+//    @Override
+//    public String toString() {
+//        return "StandardRoom{" +
+//                "rooms=" + rooms +
+//                ", beds=" + beds +
+//                '}';
+//    }
 }

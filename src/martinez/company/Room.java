@@ -112,6 +112,7 @@ public class Room {
         this.averagePrice = averagePrice;
     }
 
+    // Print the object as Strings
     @Override
     public String toString() {
         return "Room{" +

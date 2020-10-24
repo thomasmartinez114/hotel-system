@@ -17,13 +17,13 @@ x checkout = remove the client from object and mark isOccupied as false, set nee
 
 x clean = set needsCleaning to false
 
-StandardRoom class:
+x StandardRoom class: inherits from Room
 …Room
 type = single
 rooms ex 1
 beds ex 1
 
-override reserve = if party size > beds * 2 print unavailable otherwise run standard reserve 
+x override reserve = if party size > beds * 2 print unavailable otherwise run standard reserve 
 
 SuiteRoom class:
 …Room

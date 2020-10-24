@@ -7,7 +7,7 @@ public class StandardRoom extends Room {
     private int beds;
 
     // Call super to allow to extend with the Constructors
-    public StandardRoom(int number, String type, int floor, float averagePrice, int rooms, int bed) {
+    public StandardRoom(int number, String type, int floor, float averagePrice, int rooms, int beds) {
         super(number, type, floor, averagePrice); // Inheriting from parent class must always be first
 
         // Assigning variables
@@ -18,7 +18,12 @@ public class StandardRoom extends Room {
     @Override //Override reserveRoom from parent class
     public boolean reserveRoom(Client occupant) {
 
-        if(occupant.getPartySize() > this.beds * 2) {
+//        if(occupant.getPartySize() > this.beds * 2) {
+//            System.out.println("Rooms is unavailable");
+//            return false;
+//        }
+
+        if(2 > this.beds * 2) {
             System.out.println("Rooms is unavailable");
             return false;
         }

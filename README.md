@@ -25,7 +25,7 @@ beds ex 1
 
 x override reserve = if party size > beds * 2 print unavailable otherwise run standard reserve 
 
-SuiteRoom class:
+x SuiteRoom class:
 …Room
 type = suite
 rooms ex 2
@@ -33,11 +33,11 @@ beds example 1
 kitchenette ex: true
 needsRestock: false
 
-override reserve = include a check on needsRestock then run standard reserve.
+x override reserve = include a check on needsRestock then run standard reserve.
 
-override checkout = set needsRestock to true run standard checkout.
+x override checkout = set needsRestock to true run standard checkout.
 
-restock() = set needs restock to false
+x restock() = set needs restock to false
 
 Client class
 name ex: John Doe

@@ -7,8 +7,12 @@ public class Main {
         StandardRoom tomsRoom = new StandardRoom(112, "single", 2,
                 58.9f, 1, 1);
 
-        System.out.println("Room Number: " + tomsRoom.getNumber() + " Beds: " + tomsRoom.getBeds()
+        SuiteRoom tomSuite = new SuiteRoom(300, "double", 4, 150.5f, 2, 2, true);
+
+         System.out.println("Room Number: " + tomsRoom.getNumber() + " Beds: " + tomsRoom.getBeds()
                 + " Rooms " + tomsRoom.getRooms());
-//        System.out.println(tomsRoom);
+         System.out.println("Standard Room: " + tomsRoom);
+
+        System.out.println("Suite: " + tomSuite);
     }
 }

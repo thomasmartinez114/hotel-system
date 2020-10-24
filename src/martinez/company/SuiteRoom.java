@@ -1,32 +1,47 @@
 package martinez.company;
 
-public class SuiteRoom {
+public class SuiteRoom extends Room {
 
     // Instance Fields || Variables
-    private String type;
     private int rooms;
     private int beds;
-    private boolean kitchenette = true;
-    private boolean needsRestock = false;
+    private boolean kitchenette;
+    private boolean needsRestock;
 
     // Constructor
-    public SuiteRoom(String type, int rooms, int beds) {
-        this.type = type;
+    public SuiteRoom(int number, String type, int floor, float averagePrice, int rooms,
+                     int beds, boolean kitchenette) {
+        super(number, type, floor, averagePrice);
         this.rooms = rooms;
         this.beds = beds;
+
+        this.kitchenette = kitchenette;
+        this.needsRestock = false;
     }
 
     // reStock method
     public void reStock() {
-        
+        if (!needsRestock)
+            this.needsRestock = true;
     }
 
-    public String getType() {
-        return type;
+    // reserveRoom override check kitchen and need restocking
+    @Override
+    public boolean reserveRoom(Client occupant) {
+        if(this.kitchenette && this.needsRestock) {
+            System.out.println("Can't book, room needs restock");
+            return false;
+        }
+        return super.reserveRoom(occupant);
     }
 
-    public void setType(String type) {
-        this.type = type;
+    // checkoutRoom override
+    @Override
+    public void checkoutRoom(Client occupant) {
+        if(this.kitchenette) {
+            this.needsRestock = true;
+        }
+        super.checkoutRoom(occupant);
     }
 
     public int getRooms() {

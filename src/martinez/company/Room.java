@@ -3,7 +3,7 @@ package martinez.company;
 public class Room {
 
     // Instance Fields || Variables
-    private int number;
+    private int roomNumber;
     private String type;
     private int floor;
     private boolean isOccupied;
@@ -12,8 +12,8 @@ public class Room {
     private float averagePrice;
 
     // Constructor
-    public Room(int number, String type, int floor, float averagePrice) {
-        this.number = number;
+    public Room(int roomNumber, String type, int floor, float averagePrice) {
+        this.roomNumber = roomNumber;
         this.type = type;
         this.floor = floor;
         this.occupant = null;
@@ -56,12 +56,12 @@ public class Room {
     }
 
     // Getter Setters
-    public int getNumber() {
-        return number;
+    public int getRoomNumber() {
+        return roomNumber;
     }
 
-    public void setNumber(int number) {
-        this.number = number;
+    public void setRoomNumber(int roomNumber) {
+        this.roomNumber = roomNumber;
     }
 
     public String getType() {
@@ -116,7 +116,7 @@ public class Room {
     @Override
     public String toString() {
         return "Room{" +
-                "number=" + number +
+                "number=" + roomNumber +
                 ", type='" + type + '\'' +
                 ", floor=" + floor +
                 ", isOccupied=" + isOccupied +

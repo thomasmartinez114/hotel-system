@@ -2,7 +2,7 @@ Hotel System
 
 For this exercise you will be given all objects as well as examples of their fields and their methods but the actual implementation of these items in code will be up to you to figure out. use this to practice your inheritance and composition as well as overloading and overriding.
 
-Room class
+x Room class
 number ex: 102
 type ex: ’single’
 floor ex: 3
@@ -11,11 +11,11 @@ needsCleaning: false
 occupant: a Client
 averagePrice: 38000
 
-reserve = Should change room to isOccupied and assign the client to the occupant and update client bill to average price if isOccupied and needsCleaning are false otherwise print “unavailable” Should return true if successful or false if issue.
+x reserve = Should change room to isOccupied and assign the client to the occupant and update client bill to average price if isOccupied and needsCleaning are false otherwise print “unavailable” Should return true if successful or false if issue.
 
-checkout = remove the client from object and mark isOccupied as false, set needsCleaning to true, display o outstanding balance for the client.
+x checkout = remove the client from object and mark isOccupied as false, set needsCleaning to true, display o outstanding balance for the client.
 
-clean = set needsCleaning to false
+x clean = set needsCleaning to false
 
 StandardRoom class:
 …Room

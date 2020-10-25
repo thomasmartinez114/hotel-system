@@ -7,15 +7,19 @@ public class Client extends Room {
     private float currentBill;
     private float prepaidBill;
     private String phoneNumber;
+    private String roomNumber;
+    private String roomType;
 
-    // Constructor with super from Room
-    public Client(int roomNumber, String type, int floor, float averagePrice, String clientName, int partySize, float currentBill, float prepaidBill, String phoneNumber) {
+    // Constructor
+    public Client(int roomNumber, String type, int floor, float averagePrice, String clientName, int partySize, float currentBill, float prepaidBill, String phoneNumber, String roomNumber1, String roomType) {
         super(roomNumber, type, floor, averagePrice);
         this.clientName = clientName;
         this.partySize = partySize;
         this.currentBill = currentBill;
         this.prepaidBill = prepaidBill;
         this.phoneNumber = phoneNumber;
+        this.roomNumber = roomNumber1;
+        this.roomType = roomType;
     }
 
     public String getClientName() {
@@ -56,5 +60,22 @@ public class Client extends Room {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    @Override
+    public String getRoomNumber() {
+        return roomNumber;
+    }
+
+    public void setRoomNumber(String roomNumber) {
+        this.roomNumber = roomNumber;
+    }
+
+    public String getRoomType() {
+        return roomType;
+    }
+
+    public void setRoomType(String roomType) {
+        this.roomType = roomType;
     }
 }

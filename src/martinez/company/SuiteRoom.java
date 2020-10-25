@@ -9,7 +9,7 @@ public class SuiteRoom extends Room {
     private boolean needsRestock;
 
     // Constructor
-    public SuiteRoom(int roomNumber, String type, int floor, float averagePrice, int rooms,
+    public SuiteRoom(int roomNumber, String roomType, int floor, float averagePrice, int rooms,
                      int beds, boolean kitchenette) {
         super(roomNumber, type, floor, averagePrice);
         this.rooms = rooms;

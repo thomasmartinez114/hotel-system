@@ -4,7 +4,7 @@ public class Room {
 
     // Instance Fields || Variables
     private int roomNumber;
-    private String type;
+    private String roomType;
     private int floor;
     private boolean isOccupied;
     private boolean needsCleaning;
@@ -14,7 +14,7 @@ public class Room {
     // Constructor
     public Room(int roomNumber, String type, int floor, float averagePrice) {
         this.roomNumber = roomNumber;
-        this.type = type;
+        this.roomType = type;
         this.floor = floor;
         this.occupant = null;
         this.averagePrice = averagePrice;
@@ -65,11 +65,11 @@ public class Room {
     }
 
     public String getType() {
-        return type;
+        return roomType;
     }
 
     public void setType(String type) {
-        this.type = type;
+        this.roomType = type;
     }
 
     public int getFloor() {
@@ -117,7 +117,7 @@ public class Room {
     public String toString() {
         return "Room{" +
                 "number=" + roomNumber +
-                ", type='" + type + '\'' +
+                ", type='" + roomType + '\'' +
                 ", floor=" + floor +
                 ", isOccupied=" + isOccupied +
                 ", needsCleaning=" + needsCleaning +

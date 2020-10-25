@@ -35,18 +35,18 @@ needsRestock: false
 
 x override reserve = include a check on needsRestock then run standard reserve.
 
-x override checkout = set needsRestock to true run standard checkout.
+x override checkout = set needsRestock to true run standard zcheckout.
 
 x restock() = set needs restock to false
 
 Client class
-name ex: John Doe
-partySize: 1
-currentBill ex: 450
-prepaid ex: 100
-phoneNumber: 555-555-5555
-roomNumber: 302
-roomType: ‘double’
+x name ex: John Doe
+x partySize: 1
+x currentBill ex: 450
+x prepaid ex: 100
+x phoneNumber: 555-555-5555
+x roomNumber: 302
+x roomType: ‘double’
 
 makePayment = increase prepaid 
 

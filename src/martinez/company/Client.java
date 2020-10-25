@@ -22,6 +22,23 @@ public class Client extends Room {
         this.roomType = roomType;
     }
 
+    // Methods
+
+    // Payment made
+    public void makePayment (float balancePaid){
+        this.prepaidBill += balancePaid;
+    }
+
+    // Charge added to room
+    public void chargeRoom (float balanceAdd){
+        this.currentBill += balanceAdd;
+    }
+
+    // Get remaining bill
+//    public void getOutstanding () {
+//
+//    }
+
     public String getClientName() {
         return clientName;
     }

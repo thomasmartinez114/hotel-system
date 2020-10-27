@@ -1,25 +1,23 @@
 package martinez.company;
 
-public class Client extends Room {
+public class Client {
 
     private String clientName;
     private int partySize;
     private float currentBill;
     private float prepaidBill;
     private String phoneNumber;
-    private String roomNumber;
-    private String roomType;
 
     // Constructor
-    public Client(int roomNumber, String type, int floor, float averagePrice, String clientName, int partySize, float currentBill, float prepaidBill, String phoneNumber, String roomNumber1, String roomType) {
-        super(roomNumber, type, floor, averagePrice);
+    public Client(String clientName, int partySize, float currentBill, float prepaidBill, String phoneNumber) {
         this.clientName = clientName;
         this.partySize = partySize;
         this.currentBill = currentBill;
         this.prepaidBill = prepaidBill;
         this.phoneNumber = phoneNumber;
-        this.roomNumber = roomNumber1;
-        this.roomType = roomType;
+
+        // Balance after prepaid
+        this.currentBill -= prepaidBill;
     }
 
     // Methods
@@ -35,9 +33,10 @@ public class Client extends Room {
     }
 
     // Get remaining bill
-//    public void getOutstanding () {
-//
-//    }
+    public float getOutstanding () {
+        System.out.println("Current Bill: " + this.currentBill);
+        return this.currentBill;
+    }
 
     public String getClientName() {
         return clientName;
@@ -79,20 +78,4 @@ public class Client extends Room {
         this.phoneNumber = phoneNumber;
     }
 
-    @Override
-    public String getRoomNumber() {
-        return roomNumber;
-    }
-
-    public void setRoomNumber(String roomNumber) {
-        this.roomNumber = roomNumber;
-    }
-
-    public String getRoomType() {
-        return roomType;
-    }
-
-    public void setRoomType(String roomType) {
-        this.roomType = roomType;
-    }
 }

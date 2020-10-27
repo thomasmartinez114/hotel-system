@@ -11,7 +11,7 @@ public class SuiteRoom extends Room {
     // Constructor
     public SuiteRoom(int roomNumber, String roomType, int floor, float averagePrice, int rooms,
                      int beds, boolean kitchenette) {
-        super(roomNumber, type, floor, averagePrice);
+        super(roomNumber, roomType, floor, averagePrice);
         this.rooms = rooms;
         this.beds = beds;
 

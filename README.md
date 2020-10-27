@@ -48,11 +48,11 @@ x phoneNumber: 555-555-5555
 x roomNumber: 302
 x roomType: ‘double’
 
-makePayment = increase prepaid 
+x makePayment = increase prepaid 
 
-chargeRoom = increase current bill
+x chargeRoom = increase current bill
 
-getOustanding = get outstanding balance.
+x getOustanding = get outstanding balance.
 
 Hotel class:
 name ex: Hotel Java

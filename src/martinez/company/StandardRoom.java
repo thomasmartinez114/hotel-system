@@ -8,7 +8,7 @@ public class StandardRoom extends Room {
 
     // Call super to allow to extend with the Constructors
     public StandardRoom(int roomNumber, String roomType, int floor, float averagePrice, int rooms, int beds) {
-        super(roomNumber, type, floor, averagePrice); // Inheriting from parent class must always be first
+        super(roomNumber, roomType, floor, averagePrice); // Inheriting from parent class must always be first
 
         // Assigning variables
         this.rooms = rooms;
